@@ -1,0 +1,62 @@
+@import 'src/assets/theme/cards/main-card/variables';
+
+.custom-card {
+  position: relative;
+  width: 80%;
+  background-color: #F9F7F6;
+  border-radius: 16px;
+  padding: $card-padding;
+  height: $card-max-width-height;
+
+  .card-header {
+    gap: 6px;
+
+    .card-title {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .icon {
+      height: $icon-size;
+      width: $icon-size;
+    }
+  }
+}
+
+.card-image {
+  position: absolute;
+  z-index: 1;
+  max-height: $card-max-width-height;
+  right: 0;
+  top: 90px;
+  width: 115px;
+
+  img {
+    height: 160px;
+    cursor: pointer;
+    transition: $image-hover-transition;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .card-image {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    right: 20px;
+    top: 35px;
+    width: 115px;
+  }
+}
+
+@media (max-width: 560px) {
+  .card-description {
+    max-width: $card-max-width-height;
+    padding-right: 15px !important;
+  }
+}
+

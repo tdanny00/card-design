@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;700&display=swap');
+
+@function calculate-rem($size) {
+  @if ($size == 0) {
+    @return $size;
+  }
+
+  $rem-size: calc($size / 14);
+  @return #{$rem-size}rem;
+}
+
+body{
+  font-family: 'Lexend', sans-serif !important;
+}
+
